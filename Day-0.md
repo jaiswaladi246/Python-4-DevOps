@@ -1,4 +1,4 @@
-Here's the detailed syllabus for a 30-day Python for DevOps course:
+## This is syllabus for a 30-day Python for DevOps course by DevOps Course
 
 ## Day 1: 🐍 Introduction to Python
 - **Topics:**
