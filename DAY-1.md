@@ -4,6 +4,28 @@
 
 Python is a high-level, versatile, and dynamically typed programming language. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability and simplicity, making it an excellent choice for beginners and professionals alike.
 
+### 3 Core feature of Python Language:
+
+1. **High-level Language**:
+
+    A high-level programming language is designed to be human-readable and easy to understand. It contains abstracted instructions that are closer to human language than the machine language that a computer directly understands. High-level languages are not tied to specific hardware and are more portable.
+
+2. **Versatile**:
+
+    Python is versatile because it can be used for a wide variety of tasks. It's a general-purpose language, which means it can be applied to solve different types of problems. Python is used in web development, scientific computing, data analysis, artificial intelligence, automation, scripting, and much more.
+
+3. **Dynamically Typed**:
+
+    In a dynamically typed language like Python, you don't need to specify the type of a variable explicitly. Instead, the type of a variable is inferred at runtime based on the value it holds. This means you can assign different types of values to a variable during the execution of a program.
+
+    For example, in Python:
+
+    ```python
+    my_variable = 42   # my_variable is an integer
+    my_variable = "Hello"   # my_variable is now a string
+    ```
+
+
 ### Key Features of Python:
 
 1. **Easy to Learn and Read**: Python's syntax is designed to be intuitive and readable, which reduces the cost of program maintenance.
@@ -26,29 +48,33 @@ DevOps is a set of practices that aim to automate and integrate the processes of
 
 Python's simplicity and readability make it an excellent choice for scripting tasks. DevOps engineers use Python to automate repetitive tasks like deployment, configuration management, and system monitoring.
 
-**Example: Automating Server Provisioning**
+**Example: Automating Backup**
 
 ```python
-import paramiko
+import shutil
+import os
 
-def provision_server(ip, username, password):
-    ssh_client = paramiko.SSHClient()
-    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh_client.connect(ip, username=username, password=password)
+def backup_folder(source_folder, backup_folder):
+    try:
+        # Check if the source folder exists
+        if not os.path.exists(source_folder):
+            print(f"Error: Source folder '{source_folder}' does not exist.")
+            return
 
-    commands = [
-        'sudo apt update',
-        'sudo apt install -y apache2',
-        'sudo systemctl start apache2'
-    ]
+        # Create the backup folder if it doesn't exist
+        if not os.path.exists(backup_folder):
+            os.makedirs(backup_folder)
 
-    for command in commands:
-        stdin, stdout, stderr = ssh_client.exec_command(command)
-        print(stdout.read())
+        # Copy contents of source folder to backup folder
+        shutil.copytree(source_folder, os.path.join(backup_folder, os.path.basename(source_folder)))
 
-    ssh_client.close()
+        print(f"Backup completed successfully.")
+    except Exception as e:
+        print(f"Error: {e}")
 
-provision_server('192.168.1.100', 'username', 'password')
+# Example usage
+source_folder = '/path/to/source_folder'
+backup_folder = '/path/to/backup_folder'
 ```
 
 ### 2. **Configuration Management**:
@@ -119,6 +145,4 @@ print(f'CPU Usage: {cpu_percent}%')
 print(f'Memory Usage: {memory_info.percent}%')
 ```
 
-### Conclusion:
 
-Python's simplicity, versatility, and powerful libraries make it an indispensable tool for DevOps practitioners. Its ability to automate tasks, manage configurations, and integrate seamlessly with other tools is instrumental in creating efficient and reliable DevOps workflows.
