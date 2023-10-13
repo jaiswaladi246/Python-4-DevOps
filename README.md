@@ -12,7 +12,7 @@ Welcome to the 30 DAYS OF PYTHON FOR DEVOPS 💻 repository! This course is desi
 - Day 4: 🧠 Control Flow and Loops - Understanding control structures and loops in Python.
 - Day 5: 🛠️ Functions and Modules - Writing reusable code with functions and modules.
 
-**Exercise**: Write a Python script that automates the creation of virtual environments for different projects.
+**Exercise**: Write a Python script showcasing the use of python datatypes, handling files, control flow loops, functions & modules.
 
 **Day 6-10: Networking and Automation 🌐**
 
