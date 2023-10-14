@@ -1,4 +1,4 @@
-# Python syntax, data types, and variables
+# Day-2 | Python syntax, data types, and variables
 
 ## Python Syntax:
 
