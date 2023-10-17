@@ -1,6 +1,6 @@
 # Day-5 | Functions & Modules
 
-Certainly! Functions and modules are fundamental concepts in Python that allow you to write reusable and organized code. 
+Functions and modules are fundamental concepts in Python that allow you to write reusable and organized code. 
 
 ## Functions:
 
