@@ -1,4 +1,4 @@
-# Socket Library
+# DAY-6 | Socket Library
 
 The Python `socket` library provides a set of tools for network communication. It allows programs to create and manage network connections for sending and receiving data over a network. Here are some key concepts and functions provided by the `socket` library:
 
