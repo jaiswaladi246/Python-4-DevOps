@@ -1,4 +1,4 @@
-# API
+# DAY-10 | API
 
 API stands for Application Programming Interface. It's a set of rules and protocols that allows different software applications to communicate and interact with each other. APIs are used to enable the exchange of data and functionality between different systems, which can be running on different servers, devices, or platforms.
 
